@@ -14,6 +14,6 @@ https://asianiceguy9423.github.io/cat_game/
 
 - ### 更新日誌
 - **2025/08/19** 
-狀態管理改用pinia
-常用操作抽離成共用tools
-新增視窗彈跳警告
+- 狀態管理改用pinia
+- 常用操作抽離成共用tools
+- 新增視窗彈跳警告
