@@ -27,4 +27,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./.output/public
+          publish_dir: ./.output/public # Nuxt 靜態輸出的預設資料夾
+          publish_branch: gh-pages # <-- 加入這一行！
