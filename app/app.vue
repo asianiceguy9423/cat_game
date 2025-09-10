@@ -51,6 +51,9 @@ import WarnWindow from '../components/WarnWindow.vue';
 import SolitaireWindows from '../components/Solitaire/SolitaireWindows.vue';
 import LoadingPage from '../components/Loading/LoadingPage.vue';
 import { useHead } from '#imports'
+import { useRuntimeConfig  } from '#app'
+
+const runtimeConfig = useRuntimeConfig()
 
 //title icon
 useHead({
@@ -59,7 +62,7 @@ useHead({
     {
       rel: 'icon',
       type: '/image/png',
-      href: '/icon.png',
+      href: `${runtimeConfig .app.baseURL}/icon.png`,
     }
   ]
 })
