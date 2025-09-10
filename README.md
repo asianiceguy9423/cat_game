@@ -1,75 +1,23 @@
-# Nuxt Minimal Starter
+# cat_game
+https://asianiceguy9423.github.io/cat_game/
+<br>
+這是一款模擬 Windows 98 風格的貓咪養成桌面網站，採用高飽和色彩、細明體字型與經典視窗介面，搭配流暢的操作體驗，帶你重回 2000 年代初的懷舊時光。按鍵反應快速，沒有多餘資源干擾，是一款簡單卻充滿趣味的前端專案。
+<hr>
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+### 專案特色
+- **前端框架:** 使用 Vue 3 Composition API 結合 JavaScript 與 CSS 實作介面與互動功能。
+- **元件模組化：** 各功能以元件方式拆分，提升程式可維護性與擴充彈性。
+- **狀態管理：** 使用 Pinia 建立統一的資料流，確保狀態在元件間傳遞時保持一致與可追蹤。
+- **網頁部屬:** 透過 GitHub Pages 部署為靜態網站，開啟快速、免後端支援。
+- **響應式設計:** 支援桌面與手機裝置，並針對行動端取消「視窗可拖曳」功能，提升操作友善度。
+- **懷舊視覺風格:** 模仿 Win98 視窗與桌面操作介面，搭配細明體與鮮明配色，強化復古感。
 
-## Setup
+### 網站操作
+- 操作示範
+![操作示範](https://github.com/user-attachments/assets/4235737a-cd43-4e4e-b536-8b907224d641)
 
-Make sure to install dependencies:
-
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+### 更新日誌
+- **2025/08/19** 
+  - 狀態管理改用pinia
+  - 常用操作抽離成共用tools
+  - 新增視窗彈跳警告
