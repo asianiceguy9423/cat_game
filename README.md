@@ -5,7 +5,7 @@ https://asianiceguy9423.github.io/cat_game/
 <hr>
 
 ### 專案特色
-- **前端框架:** 使用 Vue 3 Composition API 結合 JavaScript 與 CSS 實作介面與互動功能。
+- **前端框架:** 使用 Nuxt 3（基於 Vue 3），搭配 Composition API 撰寫元件邏輯，並透過 JavaScript 與 CSS 完成介面設計與互動功能。
 - **元件模組化：** 各功能以元件方式拆分，提升程式可維護性與擴充彈性。
 - **狀態管理：** 使用 Pinia 建立統一的資料流，確保狀態在元件間傳遞時保持一致與可追蹤。
 - **網頁部屬:** 透過 GitHub Pages 部署為靜態網站，開啟快速、免後端支援。
@@ -21,3 +21,5 @@ https://asianiceguy9423.github.io/cat_game/
   - 狀態管理改用pinia
   - 常用操作抽離成共用tools
   - 新增視窗彈跳警告
+- **2025/09/11 [1.1.0] **
+  - 框架由 Vue3 更新為 Nuxt3
