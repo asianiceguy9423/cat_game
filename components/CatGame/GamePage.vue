@@ -98,6 +98,7 @@ import { computed, onMounted, onUnmounted, ref, toRef } from 'vue';
 import { draggableTool } from '../tools/appWindowsControl';
 import { useCatStateTools } from '../tools/CatStateTool';
 import { useTimeStateTools } from '../tools/TimeStateTools';
+import { useRuntimeConfig } from '#app'
 
 //子元件
 import CatGameToolFeed from './CatGameToolFeed.vue';
@@ -164,30 +165,54 @@ const whatCatYouHave = ()=>{
     return '快樂貓'
   }
 }
+// 建立貓咪名稱與圖片檔名的映射
+const catImageMap = {
+  '殺手貓': '殺手貓.jpg',
+  '潔癖貓': '潔癖貓.gif',
+  '熬夜貓': '熬夜貓.jpg',
+  '死靈貓': '死靈貓.jpg',
+  '大胖貓': '大胖貓.jpg',
+  '骷髏弓箭貓': '骷髏弓箭貓.jpg',
+  '活力貓': '活力貓.jpg',
+  '嗜睡貓': '嗜睡貓.jpg',
+  '健康貓': '健康貓.jpg',
+  '快樂貓': '快樂貓.jpg',
+}
+const whatCatImgURL = () => {
+  const catName = whatCatYouHave()
+  const fileName = catImageMap[catName]
 
-const whatCatImgURL = ()=>{
-  if(whatCatYouHave() === '殺手貓'){
-    return '/image/殺手貓.jpg'
-  } else if(whatCatYouHave() === '潔癖貓'){
-    return '/image/潔癖貓.gif'
-  } else if(whatCatYouHave() === '熬夜貓'){
-    return '/image/熬夜貓.jpg'
-  } else if(whatCatYouHave() === '死靈貓'){
-    return '/image/死靈貓.jpg'
-  } else if(whatCatYouHave() === '大胖貓'){
-    return '/image/大胖貓.jpg'
-  } else if(whatCatYouHave() === '骷髏弓箭貓'){
-    return '/image/骷髏弓箭貓.jpg'
-  } else if(whatCatYouHave() === '活力貓'){
-    return '/image/活力貓.jpg'
-  } else if(whatCatYouHave() === '嗜睡貓'){
-    return '/image/嗜睡貓.jpg'
-  } else if(whatCatYouHave() === '健康貓'){
-    return '/image/健康貓.jpg'
-  } else if(whatCatYouHave() === '快樂貓'){
-    return '/image/快樂貓.jpg'
+  // 如果貓咪名稱在映射物件中，就回傳正確的 URL
+  if (fileName) {
+    return `${useRuntimeConfig().app.baseURL}/image/${fileName}`
   }
-}    
+  // 如果找不到，可以回傳預設圖片或 null
+  return null
+}
+
+// const whatCatImgURL = ()=>{
+//   if(whatCatYouHave() === '殺手貓'){
+//     return `${useRuntimeConfig().app.baseURL}/image/殺手貓.jpg`
+//   } else if(whatCatYouHave() === '潔癖貓'){
+//     return `${useRuntimeConfig().app.baseURL}/image/潔癖貓.gif`
+//   } else if(whatCatYouHave() === '熬夜貓'){
+//     return `${useRuntimeConfig().app.baseURL}/image/熬夜貓.jpg`
+//   } else if(whatCatYouHave() === '死靈貓'){
+//     return `${useRuntimeConfig().app.baseURL}/image/死靈貓.jpg`
+//   } else if(whatCatYouHave() === '大胖貓'){
+//     return `${useRuntimeConfig().app.baseURL}/image/大胖貓.jpg`
+//   } else if(whatCatYouHave() === '骷髏弓箭貓'){
+//     return `${useRuntimeConfig().app.baseURL}/image/骷髏弓箭貓.jpg`
+//   } else if(whatCatYouHave() === '活力貓'){
+//     return `${useRuntimeConfig().app.baseURL}/image/活力貓.jpg`
+//   } else if(whatCatYouHave() === '嗜睡貓'){
+//     return `${useRuntimeConfig().app.baseURL}/image/嗜睡貓.jpg`
+//   } else if(whatCatYouHave() === '健康貓'){
+//     return `${useRuntimeConfig().app.baseURL}/image/健康貓.jpg`
+//   } else if(whatCatYouHave() === '快樂貓'){
+//     return `${useRuntimeConfig().app.baseURL}/image/快樂貓.jpg`
+//   }
+// }    
 
 //控制視窗
 const catGameRef = ref(null);
