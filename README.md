@@ -21,5 +21,5 @@ https://asianiceguy9423.github.io/cat_game/
   - 狀態管理改用pinia
   - 常用操作抽離成共用tools
   - 新增視窗彈跳警告
-- **2025/09/11-[1.1.0]**
+- **2025/09/11-[0.1.0]**
   - 框架由 Vue3 更新為 Nuxt3
