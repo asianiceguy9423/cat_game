@@ -11,7 +11,7 @@ export default defineNuxtConfig({
   },
   app: {
     baseURL: '/cat_game/', // 這裡要改成 GitHub 專案名稱
-    buildAssetsDir: '/_nuxt/',
-    cdnURL: 'https://asianiceguy9423.github.io/cat_game'
+    // buildAssetsDir: '/_nuxt/',
+    // cdnURL: 'https://asianiceguy9423.github.io/cat_game'
   }
 })
